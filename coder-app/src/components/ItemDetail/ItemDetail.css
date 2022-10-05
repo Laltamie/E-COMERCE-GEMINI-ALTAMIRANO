@@ -1,0 +1,21 @@
+.card-ItemD {
+    width: 250px;
+    margin: 25px;
+}
+
+.card-ItemD p{
+    font-size: 18px;
+}
+
+.container li {
+    text-decoration: none;
+    list-style: none;
+}
+.conten-detalle {
+    margin: 100px;
+}
+
+.conetenedor-detalle {
+    display: flex;
+    flex-direction: column;
+}

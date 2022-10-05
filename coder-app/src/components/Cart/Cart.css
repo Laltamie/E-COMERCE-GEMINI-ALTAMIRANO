@@ -1,0 +1,25 @@
+.cart-conten{
+    display: flex;
+    justify-content: space-around;
+    margin: 100px;
+    align-items: center;
+}
+
+.cart-conten button {
+    align-items: center;
+}
+.cart-conten p {
+    font-weight: bold;
+}
+
+.cont-cart {
+    margin: 100px;
+}
+
+.cont-cart a {
+    color: #008000 !important;
+}
+
+.disabled-link {
+    pointer-events: none;
+  }

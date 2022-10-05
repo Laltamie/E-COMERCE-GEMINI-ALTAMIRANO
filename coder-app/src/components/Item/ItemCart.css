@@ -1,0 +1,23 @@
+
+.boton-eliminar {
+    font-size: 13px;
+    text-align: center;
+    
+}
+.card-body h3 {
+    font-size: 15px;
+}
+.card-body h2 {
+    font-size: 20px;
+}
+
+.card-Item  {
+    width: 300px;
+    margin: 20px;
+}
+
+.card-ItemL img {
+    width: 450px;
+    margin: 5px;
+    
+}
