@@ -11,11 +11,15 @@
     text-decoration: none;
     list-style: none;
 }
+
+.container {
+    display: flex;
+}
 .conten-detalle {
     margin: 100px;
 }
 
-.conetenedor-detalle {
+.contenedor-detalle {
     display: flex;
     flex-direction: column;
 }

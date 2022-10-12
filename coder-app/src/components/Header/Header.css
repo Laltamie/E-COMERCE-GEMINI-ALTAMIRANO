@@ -1,4 +1,4 @@
-/* .conten-header {
+.conten-header {
     background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,22 +8,22 @@
     margin: auto;
     margin-top: 0px;
     font-family: 'Roboto', sans-serif;
-} */
+}
 
-/* .carousel-div {
+.carousel-div {
     display: flex;
     flex-direction: column;
     height: 800px ; 
-} */
+}
 
-/* .carousel-item {
+.carousel-item {
    height: 100%;
    max-width: 100%;
     
-} */
+}
 
-/* .img-carr {
+.img-carr {
     height: 100%;
     width: 100%;
     object-fit: contain;
-} */
+}

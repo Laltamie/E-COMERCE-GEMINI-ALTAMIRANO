@@ -1,0 +1,9 @@
+.col-md-4 {
+    width: 288px !important;
+}
+
+.contenedor-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

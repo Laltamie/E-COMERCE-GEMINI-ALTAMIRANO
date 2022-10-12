@@ -14,7 +14,10 @@ const Cart = () => {
           <div className="container greeting py-100">
 
             {cart.length === 0 ? (
-              <div className="container cont-cart"> <p>¡ No hay elementos en el carrito !</p>  <Link to="/">Comprar!</Link> </div>
+              <div className="container d-flex justify-content-evenly cont-cart text-center"> 
+                <p>¡ No hay elementos en el carrito !</p> 
+                <div><Link to="/"> Comprar!</Link></div>
+              </div>
             ) : (
               cart.map(item => <ItemCart key={item.id} item={item}/>)
             )}
@@ -33,7 +36,7 @@ const Cart = () => {
 
             ) : (
               <div className="cart-conten">
-            <p>
+            <p className="text-light">
               Total: $ {totalPrecio()}
             </p>
             <button type="button" className="btn btn-danger" onClick={borrarCart}>Vaciar Carrito</button>

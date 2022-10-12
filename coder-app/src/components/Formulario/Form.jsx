@@ -1,5 +1,5 @@
 
-import { addDoc, collection, getFirestore, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getFirestore, serverTimestamp, updateDoc } from 'firebase/firestore';
 import { React, useContext, useState } from 'react';
 import { CartContext } from '../../Context/CartContext';
 
@@ -24,6 +24,17 @@ const Form = ( { handleId } ) => {
         .then((res) => {
             handleId(res.id);
         })
+        .then(
+            cart.forEach(element => {
+                const cantidadCompra = element.quantity
+                const updateCollection = doc( db, "items", `${element.id}`)
+                getDoc(updateCollection)
+                .then( res => {
+                    const upDatedStock = res.data().stock - cantidadCompra
+                    updateDoc(updateCollection, {"stock": upDatedStock})
+                })
+            }))
+
     };
 
     const handleNombre = (e) => setNombre(e.target.value);

@@ -1,6 +1,7 @@
 .card-ItemL img {
-    width: 450px;
+    width: 250px;
     margin: 5px;
+    object-fit: contain;
     
 }
 
