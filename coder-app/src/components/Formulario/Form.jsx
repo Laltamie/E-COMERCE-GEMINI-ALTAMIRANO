@@ -34,7 +34,6 @@ const Form = ( { handleId } ) => {
                     updateDoc(updateCollection, {"stock": upDatedStock})
                 })
             }))
-
     };
 
     const handleNombre = (e) => setNombre(e.target.value);

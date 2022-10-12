@@ -27,28 +27,25 @@ const Cart = () => {
           {
             cart.length === 0 ? (
               <div className="cart-conten">
-              <p>
-                Total: $ {totalPrecio()}
-              </p>
-              <button disabled type="button" className="btn btn-danger" onClick={borrarCart}>Vaciar Carrito</button>
-              <Link to="/checkout" className="disabled-link">Finalizar Compra</Link>
-            </div>
+                <p>
+                  Total: $ {totalPrecio()}
+                </p>
+                <button disabled type="button" className="btn btn-danger" onClick={borrarCart}>Vaciar Carrito</button>
+                <Link to="/checkout" className="disabled-link">Finalizar Compra</Link>
+              </div>
 
             ) : (
               <div className="cart-conten">
-            <p className="text-light">
-              Total: $ {totalPrecio()}
-            </p>
-            <button type="button" className="btn btn-danger" onClick={borrarCart}>Vaciar Carrito</button>
-            <Link to="/checkout" >Finalizar Compra</Link>
-          </div>
-
+                <p className="text-light">
+                  Total: $ {totalPrecio()}
+                </p>
+                <button type="button" className="btn btn-danger" onClick={borrarCart}>Vaciar Carrito</button>
+                <Link to="/checkout" >Finalizar Compra</Link>
+              </div>
             )}
-          
-            
+           
         </div>
-      </>
-          
+      </>  
     )
   };
 
