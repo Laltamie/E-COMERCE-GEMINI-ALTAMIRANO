@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import Form from '../Formulario/Form';
+import "../Checkout/Checkout.css"; 
 
 const Checkout = () => {
 
@@ -21,7 +22,7 @@ const Checkout = () => {
     
 
     return (
-        <div>
+        <div className="d-flex justify-content-center contenedor-form" >
             <Form handleId={handleId}/>
         </div>
     );

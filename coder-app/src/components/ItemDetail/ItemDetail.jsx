@@ -3,6 +3,7 @@ import "../ItemDetail/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount";
 import { useState} from "react";
 import { CartContext } from "../../Context/CartContext";
+import swal from "sweetalert";
 
 
 const ItemDetail = ({ item }) => {
@@ -14,6 +15,10 @@ const ItemDetail = ({ item }) => {
         setCantidad(cantidad);
         addProducto(item, cantidad);
     };
+    const alerta = () => {
+        swal("Producto agregado al carrito")
+    };
+
 
     return (
         <>
@@ -33,12 +38,12 @@ const ItemDetail = ({ item }) => {
                                 {cantidad === 0 ? (
                                     <div>
                                         <ItemCount stock={item.stock} inicial={1} agregarProducto={agregarProducto}/>
-
+                                        
                                     </div>
                                     
                                 ) : (
                                     <div >
-                                        <ItemCount inicial={1} agregarProducto={agregarProducto}/> 
+                                        <ItemCount inicial={1} agregarProducto={agregarProducto} alerta={alerta}/> 
                                     </div>
                                 )}
     

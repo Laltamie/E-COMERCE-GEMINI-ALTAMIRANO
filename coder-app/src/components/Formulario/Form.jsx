@@ -2,6 +2,7 @@
 import { addDoc, collection, doc, getDoc, getFirestore, serverTimestamp, updateDoc } from 'firebase/firestore';
 import { React, useContext, useState } from 'react';
 import { CartContext } from '../../Context/CartContext';
+import "../Formulario/Form.css";
 
 const Form = ( { handleId } ) => {
 
@@ -41,7 +42,11 @@ const Form = ( { handleId } ) => {
     const handleTelefono = (e) => setTelefono(e.target.value);
 
     return (
+
+       
+        
         <form action="" onSubmit={handleSubmit}>
+            <div class="mb-3">
             <input
                 type="text"
                 name="nombre"
@@ -50,6 +55,8 @@ const Form = ( { handleId } ) => {
                 onChange={handleNombre}
                 required
             />
+            </div>
+            <div>
             <input
                 type="number"
                 name="telefono"
@@ -57,8 +64,13 @@ const Form = ( { handleId } ) => {
                 value={telefono}
                 onChange={handleTelefono}
             />
-            <button>Enviar</button>
+            </div>
+            <div className="div-boton-form">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
         </form>
+       
+     
     );
 };
 

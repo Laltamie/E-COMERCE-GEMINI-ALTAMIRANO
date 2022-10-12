@@ -1,9 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../ItemCount/ItemCount.css"
+import "../ItemCount/ItemCount.css";
 
-const ItemCount = ({inicial, stock, agregarProducto}) => {
+
+const ItemCount = ({inicial, stock, agregarProducto, alerta}) => {
 
     const [contador, setContador] = useState(parseInt(inicial));
 
@@ -19,6 +20,7 @@ const ItemCount = ({inicial, stock, agregarProducto}) => {
         setContador(parseInt(inicial));
     },[inicial]);
 
+
     return (
         <div className="container">
             <div>
@@ -29,7 +31,11 @@ const ItemCount = ({inicial, stock, agregarProducto}) => {
                         <input type="button" className="btn btn-secondary" disabled={contador >= stock} value="+" onClick={incrementar}/>
                     </div>
                     <div className="d-grid gap-2">
-                            <input type="button" className="btn btn-secondary" disabled={stock <= 0} onClick={() => agregarProducto(contador)} value="Agregar al Carrito" />
+                            <input type="button" className="btn btn-secondary" disabled={stock <= 0} 
+                            onClick={() => {
+                                agregarProducto(contador);
+                                alerta();
+                            }} value="Agregar al Carrito" />
 
                             <button type="button py-3" className="btn btn-secondary" > 
                                 <Link to="/cart" className="text-light">Ir al carrito</Link> 
