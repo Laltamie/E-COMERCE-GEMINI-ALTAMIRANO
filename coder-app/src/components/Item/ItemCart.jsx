@@ -12,7 +12,7 @@ const ItemCart = ({ item }) => {
 
     <div className="row">
       <div className="container">
-            <div className="card card-Item" width="100px" margin="20px">
+            <div className="card card-Item" width="80px" margin="20px">
               <img src={'/images/' + item.img} alt={item.title} className="card-img-top" width="150px"/>
                  <div className="card-body">
                   <h2 className="card-title text-center">Título: {item.name}</h2>

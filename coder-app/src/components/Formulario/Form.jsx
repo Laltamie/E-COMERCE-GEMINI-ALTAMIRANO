@@ -9,13 +9,14 @@ const Form = ( { handleId } ) => {
     const db = getFirestore();
 
     const [nombre, setNombre] = useState('');
+    const [email, setEmail] = useState('');
     const [telefono, setTelefono] = useState('');
     const { totalPrecio, cart } = useContext(CartContext);
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const orden = {
-            buyer: {nombre, telefono},
+            buyer: {nombre, telefono, email},
             date: serverTimestamp(),
             total: totalPrecio(),
             cart
@@ -24,6 +25,7 @@ const Form = ( { handleId } ) => {
         addDoc(refOrden, orden)
         .then((res) => {
             handleId(res.id);
+            console.log(res)
         })
         .then(
             cart.forEach(element => {
@@ -37,38 +39,60 @@ const Form = ( { handleId } ) => {
             }))
     };
 
-    const handleNombre = (e) => setNombre(e.target.value);
+    
 
+    const handleNombre = (e) => setNombre(e.target.value);
+    const handleEmail = (e) => setEmail(e.target.value);
     const handleTelefono = (e) => setTelefono(e.target.value);
 
     return (
 
-       
+        <div>
+            <div className='text-center text-light'>
+                <p>Complete los siguientes datos: </p>
+            </div>
         
-        <form action="" onSubmit={handleSubmit}>
-            <div class="mb-3">
-            <input
-                type="text"
-                name="nombre"
-                placeholder="Nombre Completo"
-                value={nombre}
-                onChange={handleNombre}
-                required
-            />
+        <form className="fondo-form" action="" onSubmit={handleSubmit}>
+
+            <div className='contenedor-form d-flex justify-content-center align-items-center bg-light'>
+
+                <div className="mb-3 form-check bg-light">
+                <label htmlFor="name">Nombre completo</label>
+                    <input
+                    name="nombre"
+                    type="text"
+                    placeholder="Nombre Completo"
+                    value={nombre}
+                    onChange={handleNombre}
+                />
+                </div>
+                <div className="mb-3 form-check bg-light">
+                <label htmlFor="mail">Correo electrónico</label>
+                    <input
+                    name="mail"
+                    type="email"
+                    placeholder="E-mail"
+                    value={email}
+                    onChange={handleEmail}
+                />
+                </div>
+                <div className="mb-3 form-check bg-light">
+                <label htmlFor="phone">Teléfono</label>
+                    <input
+                    name="phone"
+                    type="tel"
+                    placeholder="Telefono"
+                    value={telefono}
+                    onChange={handleTelefono}
+                />
+                </div>
             </div>
-            <div>
-            <input
-                type="number"
-                name="telefono"
-                placeholder="Telefono"
-                value={telefono}
-                onChange={handleTelefono}
-            />
-            </div>
-            <div className="div-boton-form">
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
+                <div className="div-boton-form bg-light">
+                    <button type="submit" className="btn btn-primary">Enviar</button>
+                </div>
+            
         </form>
+        </div>
        
      
     );
