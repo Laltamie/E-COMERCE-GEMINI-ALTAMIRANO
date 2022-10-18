@@ -54,7 +54,7 @@ const Form = ( { handleId } ) => {
         
         <form className="fondo-form" action="" onSubmit={handleSubmit}>
 
-            <div className='contenedor-form d-flex justify-content-center align-items-center bg-light'>
+            <div className='contenedor-form bg-light'>
 
                 <div className="mb-3 form-check bg-light">
                 <label htmlFor="name">Nombre completo</label>
@@ -88,7 +88,9 @@ const Form = ( { handleId } ) => {
                 </div>
             </div>
                 <div className="div-boton-form bg-light">
-                    <button type="submit" className="btn btn-primary">Enviar</button>
+                    <button type="submit" className="btn btn-primary" >
+                        Enviar
+                    </button>
                 </div>
             
         </form>

@@ -13,10 +13,16 @@ const Checkout = () => {
 
     if (ordenId) {
         return (
-            <h1>
-                Gracias por tu compra, te dejamos el número de seguimiento:{' '}
-                {ordenId}
-            </h1>
+
+            <div className='contenedor-check d-flex justify-content-center align-items-center bg-dark text-light'>
+                <h1>
+                    Gracias por tu compra! 
+                    <h2>
+                        Te dejamos el número de seguimiento:{' '}
+                        {ordenId}
+                    </h2>
+                </h1>
+            </div>
         );
     }
     

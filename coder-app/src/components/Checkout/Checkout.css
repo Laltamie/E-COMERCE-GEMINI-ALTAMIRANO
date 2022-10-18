@@ -1,3 +1,11 @@
 .contenedor-form {
     padding: 100px;
 }
+
+.contenedor-check {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
