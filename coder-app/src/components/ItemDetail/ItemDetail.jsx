@@ -14,9 +14,7 @@ const ItemDetail = ({ item }) => {
     const agregarProducto = (cantidad) => {
         setCantidad(cantidad);
         addProducto(item, cantidad);
-    };
-    const alerta = () => {
-        swal("Producto agregado al carrito")
+        swal("Producto agregado al carrito");
     };
 
 
@@ -43,7 +41,7 @@ const ItemDetail = ({ item }) => {
                                     
                                 ) : (
                                     <div >
-                                        <ItemCount inicial={1} agregarProducto={agregarProducto} alerta={alerta}/> 
+                                        <ItemCount inicial={1} agregarProducto={agregarProducto}/> 
                                     </div>
                                 )}
     

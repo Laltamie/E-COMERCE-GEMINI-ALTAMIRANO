@@ -26,9 +26,6 @@ const NavBar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/categoria/verano">Verano</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contacto">Contacto</Link>
-                        </li>
                     </ul>
                     <ul className="nav justify-content-center">
                         <Link to="/cart"><CartWidget /></Link>

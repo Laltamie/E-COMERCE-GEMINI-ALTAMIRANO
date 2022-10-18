@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../ItemCount/ItemCount.css";
 
 
-const ItemCount = ({inicial, stock, agregarProducto, alerta}) => {
+const ItemCount = ({inicial, stock, agregarProducto}) => {
 
     const [contador, setContador] = useState(parseInt(inicial));
 
@@ -34,7 +34,6 @@ const ItemCount = ({inicial, stock, agregarProducto, alerta}) => {
                             <input type="button" className="btn btn-secondary" disabled={stock <= 0} 
                             onClick={() => {
                                 agregarProducto(contador);
-                                alerta();
                             }} value="Agregar al Carrito" />
 
                             <button type="button py-3" className="btn btn-secondary" > 
